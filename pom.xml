@@ -1,5 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
 	<modelVersion>4.0.0</modelVersion>
 
 	<parent>
@@ -8,106 +10,17 @@
 		<version>1.0</version>
 	</parent>
 
-
 	<groupId>tech.libra</groupId>
 	<artifactId>libra-tech-test-helloworld</artifactId>
-	<version>1.1-SNAPSHOT</version>
+	<version>1.0-SNAPSHOT</version>
 	<packaging>jar</packaging>
 
 	<scm>
-		<connection>scm:git:git@github.com:Zakharg/libra-jenkins-test-app-calculator.git</connection>
-		<url>scm:git:git@github.com:Zakharg/libra-jenkins-test-app-calculator.git</url>
-		<developerConnection>scm:git:git@github.com:Zakharg/libra-jenkins-test-app-calculator.git</developerConnection>
+		<connection>scm:git:git@github.com:Zakharg/libra-jenkins-test-calculator.git</connection>
+		<url>scm:git:git@github.com:Zakharg/libra-jenkins-test-calculator.git</url>
+		<developerConnection>scm:git:git@github.com:Zakharg/libra-jenkins-test-calculator.git</developerConnection>
 		<tag>HEAD</tag>
 	</scm>
 
-	<dependencies>
-
-		<dependency>
-			<groupId>org.springframework.boot</groupId>
-			<artifactId>spring-boot-starter-web</artifactId>
-		</dependency>
-
-		<!-- Spring dependencies -->
-		<dependency>
-			<groupId>org.springframework.boot</groupId>
-			<artifactId>spring-boot-starter-web</artifactId>
-		</dependency>
-
-		<dependency>
-			<groupId>org.springframework.boot</groupId>
-			<artifactId>spring-boot-starter-jdbc</artifactId>
-		</dependency>
-
-		<dependency>
-			<groupId>org.springframework.boot</groupId>
-			<artifactId>spring-boot-starter-hateoas</artifactId>
-		</dependency>
-
-		<dependency>
-			<groupId>org.springframework.boot</groupId>
-			<artifactId>spring-boot-starter-actuator</artifactId>
-		</dependency>
-
-		<dependency>
-			<groupId>tech.libra</groupId>
-			<artifactId>libra-jenkins-test-calculator</artifactId>
-			<version>2.0</version>
-		</dependency>
-	</dependencies>
-
-	<build>
-		<plugins>
-			<plugin>
-				<groupId>org.springframework.boot</groupId>
-				<artifactId>spring-boot-maven-plugin</artifactId>
-			</plugin>
-
-			<plugin>
-				<groupId>com.spotify</groupId>
-				<artifactId>docker-maven-plugin</artifactId>
-				<version>1.0.0</version>
-			</plugin>
-		</plugins>
-	</build>
-
-	<profiles>
-		<profile>
-			<id>build-info</id>
-			<activation>
-				<property>
-					<name>BUILD_TIMESTAMP</name>
-				</property>
-			</activation>
-			<build>
-				<plugins>
-					<plugin>
-						<groupId>org.springframework.boot</groupId>
-						<artifactId>spring-boot-maven-plugin</artifactId>
-						<executions>
-							<execution>
-								<goals>
-									<goal>build-info</goal>
-								</goals>
-								<configuration>
-									<additionalProperties>
-										<!-- Variables set by Hudson -->
-										<build-number>${BUILD_NUMBER}</build-number>
-										<build-date>${BUILD_TIMESTAMP}</build-date>
-										<project-version>${project.version.nosnapshot}</project-version>
-										<git-commit>${GIT_COMMIT}</git-commit>
-										<git-url>${GIT_URL}</git-url>
-										<git-branch>${GIT_BRANCH}</git-branch>
-										<!-- Next one for potential usage in the next AppInfo versions -->
-										<job-name>${JOB_NAME}</job-name>
-									</additionalProperties>
-								</configuration>
-							</execution>
-						</executions>
-					</plugin>
-				</plugins>
-			</build>
-		</profile>
-	</profiles>
 
 </project>
