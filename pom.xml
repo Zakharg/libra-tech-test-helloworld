@@ -16,11 +16,10 @@
 	<packaging>jar</packaging>
 
 	<scm>
-		<connection>scm:git:git@github.com:Zakharg/libra-jenkins-test-calculator.git</connection>
-		<url>scm:git:git@github.com:Zakharg/libra-jenkins-test-calculator.git</url>
-		<developerConnection>scm:git:git@github.com:Zakharg/libra-jenkins-test-calculator.git</developerConnection>
+		<connection>scm:git:git@github.com:Zakharg/libra-tech-test-helloworld.git</connection>
+		<url>scm:git:git@github.com:Zakharg/libra-tech-test-helloworld.git</url>
+		<developerConnection>scm:git:git@github.com:Zakharg/libra-tech-test-helloworld.git</developerConnection>
 		<tag>HEAD</tag>
 	</scm>
-
 
 </project>
