@@ -4,29 +4,19 @@
 	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
 	<modelVersion>4.0.0</modelVersion>
 
-	<parent>
-		<groupId>tech.libra</groupId>
-		<artifactId>libra-jenkins-test-master</artifactId>
-		<version>1.0</version>
-	</parent>
+
 
 	<groupId>tech.libra</groupId>
 	<artifactId>libra-tech-test-helloworld</artifactId>
 	<version>1.0-SNAPSHOT</version>
 	<packaging>jar</packaging>
 
-	<scm>
-		<connection>scm:git:git@github.com:Zakharg/libra-tech-test-helloworld.git</connection>
-		<url>scm:git:git@github.com:Zakharg/libra-tech-test-helloworld.git</url>
-		<developerConnection>scm:git:git@github.com:Zakharg/libra-tech-test-helloworld.git</developerConnection>
-		<tag>HEAD</tag>
-	</scm>
 
 	<dependencies>
 		<dependency>
 			<groupId>tech.libra</groupId>
-			<artifactId>libra-jenkins-test-calculator</artifactId>
-			<version>2.0</version>
+			<artifactId>libra-jenkins-test-lib</artifactId>
+			<version>1.0-SNAPSHOT</version>
 		</dependency>
 	</dependencies>
 

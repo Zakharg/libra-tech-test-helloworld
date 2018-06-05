@@ -1,11 +1,11 @@
 package tech.libra;
 
-import tech.libra.jenkins.test.calculator.*;
+import tech.libra.jenkins.test.lib.DumbCalculatorImpl;
 
 
 public class HelloWorld {
 	
-	private static Calculator calculator = new CalculatorImpl();
+	private static DumbCalculatorImpl calculator = new DumbCalculatorImpl();
 	
 	public static void main (String []args) {
 		
