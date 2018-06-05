@@ -22,4 +22,12 @@
 		<tag>HEAD</tag>
 	</scm>
 
+	<dependencies>
+		<dependency>
+			<groupId>tech.libra</groupId>
+			<artifactId>libra-jenkins-test-calculator</artifactId>
+			<version>2.0</version>
+		</dependency>
+	</dependencies>
+
 </project>
