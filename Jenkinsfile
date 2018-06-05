@@ -1,35 +1,20 @@
- pipeline {
-    agent any 
+pipeline {
+    agent any
 
     stages {
-        stage ('Compile stage') {
+        stage('Build') {
             steps {
-                withMaven(maven : 'Maven 3.5.0',
-                
-                 globalMavenSettingsConfig: "GlobalMavenSettings.xml.20171122") {
-                    sh 'mvn clean install'
-                }
+                echo 'Building..'
             }
         }
-         
-        stage ('Docker build') {
+        stage('Test') {
             steps {
-                withMaven(maven : 'Maven 3.5.0',
-                
-                 globalMavenSettingsConfig: "GlobalMavenSettings.xml.20171122") {
-                    sh 'mvn docker:build -DpushImage'
-                }
+                echo 'Testing..'
             }
         }
-
-        
-        stage ('Deployment Stage') {
+        stage('Deploy') {
             steps {
-                withMaven(maven : 'Maven 3.5.0',
-                
-                 globalMavenSettingsConfig: "GlobalMavenSettings.xml.20171122") {
-                    sh 'mvn deploy'
-                }
+                echo 'Deploying....'
             }
         }
     }
